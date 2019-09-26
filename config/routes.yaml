@@ -1,3 +1,9 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+post_index:
+    path: /posts/
+    controller: App\Controller\PostController::index
+category_index:
+    path: /categories/
+    controller: App\Controller\CategoryController::index

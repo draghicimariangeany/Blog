@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PostController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1rem auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+    <h1 class="text-center">Blog Post:</h1>
+
+<div class="example-wrapper">
+    <div class="card" style="margin-top: 3.5rem; width: 50rem;">
+        <div class="card-body">
+            <h1 class="card-text text-center" style="margin-bottom: 3rem">{{ post.Title }}</h1>
+            <p class="card-text float-right"> Author: {{ post.Author }} </p>
+            <p class="card-text float-left"> Release Date: {{ post.releaseDate|date("m/d/Y")  }} </p>
+            <p class="d-block p-2 text-center" style="margin-top: 9rem;">{{ post.Content }} </p>
+
+        </div>
+    </div>
+</div>
+    <div class="text-center">
+    <a style="color:black;" href="{{ path('post_index') }}">Back to all posts</a>
+    </div>
+{% endblock %}
