@@ -15,6 +15,7 @@
     <div class="card" style="margin-top: 3.5rem; width: 50rem;">
         <div class="card-body">
             <p class="card-text"> Title: {{ article.Title }} Author: {{ article.Author }} </p>
+            <p class="card-text"> Category: {{ article.category }} </p>
             <p class="card-text"> Description: {{ article.shortDescription }} </p>
             <p class="card-text"> Release Date: {{ article.releaseDate|date("m/d/Y")  }} </p>
             <a href="{{ path("post_index", { 'postid': article.id })}}" class="btn btn-primary float-right">Read more</a>

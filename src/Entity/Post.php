@@ -22,6 +22,11 @@ class Post
     private $Title;
 
     /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="Post")
+     */
+    private $category;
+
+    /**
      * @ORM\Column(type="string", length=100)
      */
     private $shortDescription;
@@ -102,6 +107,18 @@ class Post
     public function setReleaseDate(\DateTimeInterface $releaseDate): self
     {
         $this->releaseDate = $releaseDate;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }
